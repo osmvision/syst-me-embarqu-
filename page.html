@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station Météo Embarquée - AIVM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* ...existing code... */
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">AIVM Station Météo</div>
+            <ul class="nav-links">
+                <li><a href="#contexte">Contexte</a></li>
+                <li><a href="#analyse">Analyse</a></li>
+                <li><a href="#diagrammes">Diagrammes</a></li>
+                <li><a href="#equipe">Équipe</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Station Météorologique Embarquée</h1>
+                <p class="hero-subtitle">Surveillance océanique avancée pour la prévention des catastrophes naturelles</p>
+                <div class="team-info">
+                    <strong>Livrable 1 - Groupe 2</strong><br>
+                    Alan Manwaring • Oussama Abid • Mayssane Zarhoune • Emma Pellet
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contexte" class="section">
+        <div class="container">
+            <h2 class="section-title">Contexte du Projet</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <span class="card-icon">🌊</span>
+                    <h3>Mission AIVM</h3>
+                    <p>L'Agence Internationale pour la Vigilance Météorologique déploie des navires de surveillance équipés de stations météo embarquées pour mesurer les paramètres influant sur la formation de cyclones.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🚢</span>
+                    <h3>Partenariat Naval</h3>
+                    <p>De nombreuses sociétés de transport naval ont accepté d'équiper leurs bateaux avec ces stations, nécessitant des systèmes simples et efficaces pilotables par l'équipage.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">⚡</span>
+                    <h3>Innovation Technologique</h3>
+                    <p>Développement d'un prototype par une startup spécialisée, combinant simplicité d'utilisation et efficacité technologique pour la surveillance météorologique maritime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Additional sections continue here -->
+    
+</body>
+</html>
+                    <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station Météo Embarquée - AIVM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #1e3a8a;
+            --secondary-blue: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --dark-navy: #0f172a;
+            --light-blue: #e0f2fe;
+            --white: #ffffff;
+            --gray-100: #f8fafc;
+            --gray-200: #e2e8f0;
+            --gray-700: #374151;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-700);
+            background: linear-gradient(135deg, var(--light-blue) 0%, var(--white) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(30, 58, 138, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo::before {
+            content: "🌊";
+            font-size: 1.8rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            background: var(--accent-cyan);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="waves" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M0,50 Q25,30 50,50 T100,50 V100 H0 Z" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23waves)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateX(0px); }
+            50% { transform: translateX(-50px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .team-info {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 40px;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--secondary-blue), var(--accent-cyan));
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        /* Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, var(--secondary-blue), var(--accent-cyan));
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .card p {
+            line-height: 1.8;
+            color: var(--gray-700);
+        }
+
+        /* Interactive Features */
+        .interactive-section {
+            background: var(--gray-100);
+            border-radius: 25px;
+            padding: 50px;
+            margin: 50px 0;
+            position: relative;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            background: var(--white);
+            padding: 8px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab {
+            padding: 12px 30px;
+            border: none;
+            background: transparent;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: var(--gray-700);
+        }
+
+        .tab.active {
+            background: var(--primary-blue);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Diagram Placeholder */
+        .diagram-placeholder {
+            background: var(--white);
+            border: 2px dashed var(--secondary-blue);
+            border-radius: 15px;
+            padding: 60px;
+            text-align: center;
+            color: var(--secondary-blue);
+            font-size: 1.1rem;
+            margin: 30px 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .diagram-placeholder:hover {
+            border-color: var(--accent-cyan);
+            background: rgba(6, 182, 212, 0.05);
+        }
+
+        .diagram-placeholder::before {
+            content: "📊";
+            display: block;
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        /* Feature List */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-list li:hover {
+            padding-left: 10px;
+            color: var(--primary-blue);
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            background: var(--secondary-blue);
+            color: var(--white);
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-navy);
+            color: var(--white);
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            color: var(--accent-cyan);
+            margin-bottom: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .tabs {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .interactive-section {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--white);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">AIVM Station Météo</div>
+            <ul class="nav-links">
+                <li><a href="#contexte">Contexte</a></li>
+                <li><a href="#analyse">Analyse</a></li>
+                <li><a href="#diagrammes">Diagrammes</a></li>
+                <li><a href="#equipe">Équipe</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Station Météorologique Embarquée</h1>
+                <p class="hero-subtitle">Surveillance océanique avancée pour la prévention des catastrophes naturelles</p>
+                <div class="team-info">
+                    <strong>Livrable 1 - Groupe 2</strong><br>
+                    Alan Manwaring • Oussama Abid • Mayssane Zarhoune • Emma Pellet
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contexte" class="section">
+        <div class="container">
+            <h2 class="section-title">Contexte du Projet</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <span class="card-icon">🌊</span>
+                    <h3>Mission AIVM</h3>
+                    <p>L'Agence Internationale pour la Vigilance Météorologique déploie des navires de surveillance équipés de stations météo embarquées pour mesurer les paramètres influant sur la formation de cyclones.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🚢</span>
+                    <h3>Partenariat Naval</h3>
+                    <p>De nombreuses sociétés de transport naval ont accepté d'équiper leurs bateaux avec ces stations, nécessitant des systèmes simples et efficaces pilotables par l'équipage.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">⚡</span>
+                    <h3>Innovation Technologique</h3>
+                    <p>Développement d'un prototype par une startup spécialisée, combinant simplicité d'utilisation et efficacité technologique pour la surveillance météorologique maritime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="analyse" class="section">
+        <div class="container">
+            <h2 class="section-title">Analyse Fonctionnelle</h2>
+            
+            <div class="interactive-section">
+                <div class="tabs">
+                    <button class="tab active" onclick="showTab('acteurs')">Acteurs</button>
+                    <button class="tab" onclick="showTab('cas-usage')">Cas d'Usage</button>
+                    <button class="tab" onclick="showTab('fonctionnalites')">Fonctionnalités</button>
+                </div>
+
+                <div id="acteurs" class="tab-content active">
+                    <div class="cards-grid">
+                        <div class="card">
+                            <span class="card-icon">👨‍✈️</span>
+                            <h3>Membre d'Équipage</h3>
+                            <p><strong>Utilisateur principal</strong></p>
+                            <ul class="feature-list">
+                                <li>Consulte les données en temps réel</li>
+                                <li>Parcourt l'historique des mesures</li>
+                                <li>Interface simplifiée et intuitive</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <span class="card-icon">🔧</span>
+                            <h3>Technicien</h3>
+                            <p><strong>Maintenance et support</strong></p>
+                            <ul class="feature-list">
+                                <li>Maintenance préventive</li>
+                                <li>Mise à jour du système</li>
+                                <li>Tests des capteurs</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <span class="card-icon">📡</span>
+                            <h3>Station Météo</h3>
+                            <p><strong>Système embarqué</strong></p>
+                            <ul class="feature-list">
+                                <li>Capteurs météorologiques</li>
+                                <li>Microcontrôleur de traitement</li>
+                                <li>Module de stockage et interface</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="cas-usage" class="tab-content">
+                    <div class="cards-grid">
+                        <div class="card">
+                            <span class="card-icon">📊</span>
+                            <h3>Consultation Temps Réel</h3>
+                            <p>Affichage instantané des paramètres météorologiques : température, pression, humidité, vitesse du vent, direction du vent.</p>
+                        </div>
+                        <div class="card">
+                            <span class="card-icon">💾</span>
+                            <h3>Enregistrement des Données</h3>
+                            <p>Stockage automatique des mesures sur carte SD avec horodatage précis pour constitution d'un historique complet.</p>
+                        </div>
+                        <div class="card">
+                            <span class="card-icon">📡</span>
+                            <h3>Transmission à Distance</h3>
+                            <p>Envoi périodique des données collectées vers les centres de traitement AIVM via communication satellite ou radio.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="fonctionnalites" class="tab-content">
+                    <div class="cards-grid">
+                        <div class="card">
+                            <span class="card-icon">🔍</span>
+                            <h3>Acquisition des Données</h3>
+                            <ul class="feature-list">
+                                <li>Capteurs multi-paramètres</li>
+                                <li>Échantillonnage configurable</li>
+                                <li>Calibration automatique</li>
+                                <li>Détection d'anomalies</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <span class="card-icon">⚙️</span>
+                            <h3>Traitement et Stockage</h3>
+                            <ul class="feature-list">
+                                <li>Filtrage des données brutes</li>
+                                <li>Compression intelligente</li>
+                                <li>Sauvegarde redondante</li>
+                                <li>Gestion des erreurs</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <span class="card-icon">🌐</span>
+                            <h3>Interface et Communication</h3>
+                            <ul class="feature-list">
+                                <li>Écran tactile ergonomique</li>
+                                <li>Alertes visuelles et sonores</li>
+                                <li>Protocoles de communication sécurisés</li>
+                                <li>Mode économie d'énergie</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="diagrammes" class="section">
+        <div class="container">
+            <h2 class="section-title">Modélisation UML/SysML</h2>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Diagramme de Cas d'Utilisation</h3>
+                    <div class="diagram-container" style="background: white; padding: 20px; border-radius: 10px; text-align: center; margin: 20px 0;">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 500'%3E%3Crect width='600' height='500' fill='%23f8fafc'/%3E%3Ctext x='300' y='30' text-anchor='middle' font-size='16' font-weight='bold'%3EStation météo embarquée%3C/text%3E%3Cellipse cx='150' cy='100' rx='80' ry='25' fill='none' stroke='%23374151' stroke-width='2'/%3E%3Ctext x='150' y='105' text-anchor='middle' font-size='12'%3EConsulter historique%3C/text%3E%3Cellipse cx='150' cy='150' rx='90' ry='25' fill='none' stroke='%23374151' stroke-width='2'/%3E%3Ctext x='150' y='155' text-anchor='middle' font-size='12'%3EConsulter données temps réel%3C/text%3E%3Cellipse cx='150' cy='200' rx='95' ry='25' fill='none' stroke='%233b82f6' stroke-width='2'/%3E%3Ctext x='150' y='205' text-anchor='middle' font-size='12'%3ETransmettre données distance%3C/text%3E%3Cellipse cx='150' cy='280' rx='85' ry='25' fill='none' stroke='%23374151' stroke-width='2'/%3E%3Ctext x='150' y='285' text-anchor='middle' font-size='12'%3EEnregistrer mesures SD%3C/text%3E%3Cellipse cx='150' cy='340' rx='70' ry='25' fill='none' stroke='%23374151' stroke-width='2'/%3E%3Ctext x='150' y='345' text-anchor='middle' font-size='12'%3EAlerter seuil critique%3C/text%3E%3Cellipse cx='150' cy='400' rx='75' ry='25' fill='none' stroke='%23374151' stroke-width='2'/%3E%3Ctext x='150' y='405' text-anchor='middle' font-size='12'%3EConfigurer station%3C/text%3E%3Cellipse cx='450' cy='450' rx='100' ry='25' fill='none' stroke='%23374151' stroke-width='2'/%3E%3Ctext x='450' y='455' text-anchor='middle' font-size='12'%3EMaintenance/Mise à jour%3C/text%3E%3Ccircle cx='50' cy='200' r='15' fill='none' stroke='%23374151' stroke-width='2'/%3E%3Cline x1='50' y1='215' x2='50' y2='245' stroke='%23374151' stroke-width='2'/%3E%3Cline x1='35' y1='230' x2='65' y2='230' stroke='%23374151' stroke-width='2'/%3E%3Cline x1='50' y1='245' x2='40' y2='265' stroke='%23374151' stroke-width='2'/%3E%3Cline x1='50' y1='245' x2='60' y2='265' stroke='%23374151' stroke-width='2'/%3E%3Ctext x='50' y='285' text-anchor='middle' font-size='11'%3EMembre d'équipage%3C/text%3E%3Ccircle cx='50' cy='400' r='15' fill='none' stroke='%23374151' stroke-width='2'/%3E%3Cline x1='50' y1='415' x2='50' y2='445' stroke='%23374151' stroke-width='2'/%3E%3Cline x1='35' y1='430' x2='65' y2='430' stroke='%23374151' stroke-width='2'/%3E%3Cline x1='50' y1='445' x2='40' y2='465' stroke='%23374151' stroke-width='2'/%3E%3Cline x1='50' y1='445' x2='60' y2='465' stroke='%23374151' stroke-width='2'/%3E%3Ctext x='50' y='485' text-anchor='middle' font-size='11'%3ETechnicien%3C/text%3E%3Cline x1='65' y1='200' x2='235' y2='100' stroke='%23374151' stroke-width='1'/%3E%3Cline x1='65' y1='200' x2='235' y2='150' stroke='%23374151' stroke-width='1'/%3E%3Cline x1='65' y1='200' x2='235' y2='200' stroke='%23374151' stroke-width='1'/%3E%3Cline x1='65' y1='200' x2='235' y2='280' stroke='%23374151' stroke-width='1'/%3E%3Cline x1='65' y1='200' x2='225' y2='340' stroke='%23374151' stroke-width='1'/%3E%3Cline x1='65' y1='200' x2='225' y2='400' stroke='%23374151' stroke-width='1'/%3E%3Cline x1='65' y1='400' x2='350' y2='450' stroke='%23374151' stroke-width='1'/%3E%3Cline x1='150' y1='225' x2='150' y2='255' stroke='%233b82f6' stroke-width='2' stroke-dasharray='5,5'/%3E%3Ctext x='180' y='245' font-size='10' fill='%233b82f6'%3Einclude%3C/text%3E%3Ctext x='170' y='220' font-size='9' fill='%23666'%3E«optional»%3C/text%3E%3Cline x1='150' y1='365' x2='150' y2='375' stroke='%23374151' stroke-width='2' stroke-dasharray='5,5'/%3E%3Ctext x='180' y='375' font-size='10' fill='%23374151'%3Einclude%3C/text%3E%3C/svg%3E" alt="Diagramme de Cas d'Utilisation" style="width: 100%; max-width: 600px; height: auto;">
+                        <div style="margin-top: 15px; padding: 10px; background: #f1f5f9; border-radius: 8px;">
+                            <strong>Acteurs identifiés :</strong>
+                            <ul style="text-align: left; margin: 10px 0; list-style: none;">
+                                <li>👨‍✈️ <strong>Membre d'équipage</strong> - Utilisateur principal</li>
+                                <li>🔧 <strong>Technicien</strong> - Maintenance et configuration</li>
+                            </ul>
+                            <strong>Relations :</strong> Include (obligatoire), Extension (optionnelle)
+                        </div>
+                    </div>
+                    <p>Modélise les fonctionnalités principales du système du point de vue des utilisateurs, avec les relations entre cas d'usage selon les bonnes pratiques SysML.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Diagramme de Séquence</h3>
+                    <div class="diagram-container" style="background: white; padding: 20px; border-radius: 10px; text-align: center; margin: 20px 0;">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23f8fafc'/%3E%3Crect x='50' y='30' width='80' height='30' fill='%23e2e8f0' stroke='%23374151'/%3E%3Ctext x='90' y='50' text-anchor='middle' font-size='12'%3EMembre d'équipage%3C/text%3E%3Crect x='180' y='30' width='60' height='30' fill='%23dbeafe' stroke='%23374151'/%3E%3Ctext x='210' y='50' text-anchor='middle' font-size='12'%3EStation%3C/text%3E%3Crect x='280' y='30' width='80' height='30' fill='%23fef3c7' stroke='%23374151'/%3E%3Ctext x='320' y='50' text-anchor='middle' font-size='12'%3ECapteurs%3C/text%3E%3Crect x='400' y='30' width='80' height='30' fill='%23fce7f3' stroke='%23374151'/%3E%3Ctext x='440' y='50' text-anchor='middle' font-size='12'%3ECarte SD%3C/text%3E%3Cline x1='90' y1='60' x2='90' y2='350' stroke='%23374151' stroke-width='2' stroke-dasharray='3,3'/%3E%3Cline x1='210' y1='60' x2='210' y2='350' stroke='%23374151' stroke-width='2' stroke-dasharray='3,3'/%3E%3Cline x1='320' y1='60' x2='320' y2='350' stroke='%23374151' stroke-width='2' stroke-dasharray='3,3'/%3E%3Cline x1='440' y1='60' x2='440' y2='350' stroke='%23374151' stroke-width='2' stroke-dasharray='3,3'/%3E%3Crect x='205' y='80' width='10' height='200' fill='%233b82f6' opacity='0.3'/%3E%3Cline x1='90' y1='100' x2='205' y2='100' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Ctext x='147' y='95' font-size='11'%3EAllumer%3C/text%3E%3Cline x1='215' y1='120' x2='315' y2='120' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Ctext x='255' y='115' font-size='11'%3ElireCapteurs()%3C/text%3E%3Cline x1='315' y1='140' x2='215' y2='140' stroke='%23374151' stroke-width='2' stroke-dasharray='5,5' marker-end='url(%23arrow)'/%3E%3Ctext x='255' y='135' font-size='11'%3Emesures%3C/text%3E%3Cline x1='215' y1='160' x2='435' y2='160' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Ctext x='315' y='155' font-size='11'%3Eecrire(ligneCSV)%3C/text%3E%3Cline x1='435' y1='180' x2='215' y2='180' stroke='%23374151' stroke-width='2' stroke-dasharray='5,5' marker-end='url(%23arrow)'/%3E%3Ctext x='315' y='175' font-size='11'%3EOK%3C/text%3E%3Cline x1='205' y1='200' x2='90' y2='200' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Ctext x='125' y='195' font-size='11'%3Eafficher(mesures)%3C/text%3E%3Crect x='85' y='240' width='10' height='40' fill='%23f59e0b' opacity='0.3'/%3E%3Cdefs%3E%3Cmarker id='arrow' markerWidth='10' markerHeight='7' refX='10' refY='3.5' orient='auto'%3E%3Cpolygon points='0 0, 10 3.5, 0 7' fill='%23374151'/%3E%3C/marker%3E%3C/defs%3E%3C/svg%3E" alt="Diagramme de Séquence" style="width: 100%; max-width: 600px; height: auto;">
+                        <div style="margin-top: 15px; padding: 10px; background: #f1f5f9; border-radius: 8px;">
+                            <strong>Séquence d'acquisition des données :</strong>
+                            <ol style="text-align: left; margin: 10px 0;">
+                                <li>Allumage de la station par le membre d'équipage</li>
+                                <li>Lecture des capteurs météorologiques</li>
+                                <li>Formatage et sauvegarde des données sur carte SD</li>
+                                <li>Affichage des mesures à l'utilisateur</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <p>Illustre les interactions temporelles entre les objets du système, montrant l'ordre des opérations pour chaque cas d'usage principal.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Diagramme d'Activité</h3>
+                    <div class="diagram-container" style="background: white; padding: 20px; border-radius: 10px; text-align: center; margin: 20px 0;">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 800'%3E%3Crect width='400' height='800' fill='%23f8fafc'/%3E%3Ccircle cx='200' cy='30' r='15' fill='%23374151'/%3E%3Crect x='120' y='60' width='160' height='30' rx='15' fill='%23dbeafe' stroke='%23374151'/%3E%3Ctext x='200' y='80' text-anchor='middle' font-size='11'%3EInitialiser capteurs, carte SD, écran%3C/text%3E%3Crect x='130' y='110' width='140' height='30' rx='15' fill='%23fef3c7' stroke='%23374151'/%3E%3Ctext x='200' y='130' text-anchor='middle' font-size='11'%3ECharger paramètres%3C/text%3E%3Cpath d='M200 160 L180 180 L220 180 Z' fill='%23f59e0b' stroke='%23374151'/%3E%3Ctext x='200' y='200' text-anchor='middle' font-size='10'%3EStation active?%3C/text%3E%3Ctext x='150' y='185' text-anchor='middle' font-size='9'%3Enon%3C/text%3E%3Ctext x='250' y='185' text-anchor='middle' font-size='9'%3Eoui%3C/text%3E%3Crect x='130' y='230' width='140' height='30' rx='15' fill='%23dcfce7' stroke='%23374151'/%3E%3Ctext x='200' y='250' text-anchor='middle' font-size='11'%3ELire mesures capteurs%3C/text%3E%3Crect x='120' y='280' width='160' height='30' rx='15' fill='%23fce7f3' stroke='%23374151'/%3E%3Ctext x='200' y='300' text-anchor='middle' font-size='11'%3EAfficher mesures temps réel%3C/text%3E%3Cpath d='M200 330 L180 350 L220 350 Z' fill='%23f59e0b' stroke='%23374151'/%3E%3Ctext x='200' y='365' text-anchor='middle' font-size='9'%3ETemps enregistrement?%3C/text%3E%3Ctext x='160' y='355' text-anchor='middle' font-size='9'%3Enon%3C/text%3E%3Ctext x='240' y='355' text-anchor='middle' font-size='9'%3Eoui%3C/text%3E%3Crect x='140' y='390' width='120' height='30' rx='15' fill='%23e0e7ff' stroke='%23374151'/%3E%3Ctext x='200' y='410' text-anchor='middle' font-size='11'%3EFormater données CSV%3C/text%3E%3Crect x='150' y='440' width='100' height='30' rx='15' fill='%23fef2f2' stroke='%23374151'/%3E%3Ctext x='200' y='460' text-anchor='middle' font-size='11'%3EEcrire carte SD%3C/text%3E%3Cpath d='M200 490 L180 510 L220 510 Z' fill='%23f59e0b' stroke='%23374151'/%3E%3Ctext x='200' y='525' text-anchor='middle' font-size='9'%3EErreur écriture?%3C/text%3E%3Ctext x='150' y='515' text-anchor='middle' font-size='9'%3Enon%3C/text%3E%3Ctext x='250' y='515' text-anchor='middle' font-size='9'%3Eoui%3C/text%3E%3Crect x='30' y='530' width='120' height='30' rx='15' fill='%23fee2e2' stroke='%23dc2626'/%3E%3Ctext x='90' y='550' text-anchor='middle' font-size='10'%3EAfficher message erreur%3C/text%3E%3Crect x='250' y='530' width='120' height='30' rx='15' fill='%23d1fae5' stroke='%2316a34a'/%3E%3Ctext x='310' y='550' text-anchor='middle' font-size='10'%3EConfirmer sauvegarde%3C/text%3E%3Cpath d='M200 580 L180 600 L220 600 Z' fill='%23f59e0b' stroke='%23374151'/%3E%3Ctext x='200' y='615' text-anchor='middle' font-size='9'%3ESeuil critique dépassé?%3C/text%3E%3Ctext x='150' y='605' text-anchor='middle' font-size='9'%3Enon%3C/text%3E%3Ctext x='250' y='605' text-anchor='middle' font-size='9'%3Eoui%3C/text%3E%3Crect x='120' y='640' width='160' height='30' rx='15' fill='%23fbbf24' stroke='%23f59e0b'/%3E%3Ctext x='200' y='660' text-anchor='middle' font-size='10'%3EDéclencher alerte LED/Buzzer%3C/text%3E%3Crect x='140' y='690' width='120' height='30' rx='15' fill='%23c7d2fe' stroke='%23374151'/%3E%3Ctext x='200' y='710' text-anchor='middle' font-size='11'%3EEnregistrer événement%3C/text%3E%3Cpath d='M200 740 L180 760 L220 760 Z' fill='%23f59e0b' stroke='%23374151'/%3E%3Ctext x='200' y='775' text-anchor='middle' font-size='9'%3ECommunication disponible?%3C/text%3E%3Ctext x='150' y='765' text-anchor='middle' font-size='9'%3Enon%3C/text%3E%3Ctext x='250' y='765' text-anchor='middle' font-size='9'%3Eoui%3C/text%3E%3Cline x1='200' y1='90' x2='200' y2='110' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Cline x1='200' y1='140' x2='200' y2='160' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Cline x1='220' y1='180' x2='240' y2='180' stroke='%23374151' stroke-width='2'/%3E%3Cline x1='240' y1='180' x2='240' y2='245' stroke='%23374151' stroke-width='2'/%3E%3Cline x1='240' y1='245' x2='220' y2='245' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Cline x1='180' y1='180' x2='120' y2='180' stroke='%23374151' stroke-width='2'/%3E%3Cline x1='120' y1='180' x2='120' y2='350' stroke='%23374151' stroke-width='2'/%3E%3Cline x1='120' y1='350' x2='180' y2='350' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Cline x1='200' y1='260' x2='200' y2='280' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Cline x1='200' y1='310' x2='200' y2='330' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Cline x1='220' y1='350' x2='280' y2='350' stroke='%23374151' stroke-width='2'/%3E%3Cline x1='280' y1='350' x2='280' y2='245' stroke='%23374151' stroke-width='2'/%3E%3Cline x1='280' y1='245' x2='270' y2='245' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Cline x1='200' y1='370' x2='200' y2='390' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Cline x1='200' y1='420' x2='200' y2='440' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Cline x1='200' y1='470' x2='200' y2='490' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Cline x1='180' y1='510' x2='90' y2='510' stroke='%23374151' stroke-width='2'/%3E%3Cline x1='90' y1='510' x2='90' y2='530' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Cline x1='220' y1='510' x2='310' y2='510' stroke='%23374151' stroke-width='2'/%3E%3Cline x1='310' y1='510' x2='310' y2='530' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Cline x1='200' y1='520' x2='200' y2='580' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Cline x1='220' y1='600' x2='280' y2='600' stroke='%23374151' stroke-width='2'/%3E%3Cline x1='280' y1='600' x2='280' y2='655' stroke='%23374151' stroke-width='2'/%3E%3Cline x1='280' y1='655' x2='280' y2='655' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Cline x1='200' y1='615' x2='200' y2='740' stroke='%23374151' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Cdefs%3E%3Cmarker id='arrow' markerWidth='10' markerHeight='7' refX='10' refY='3.5' orient='auto'%3E%3Cpolygon points='0 0, 10 3.5, 0 7' fill='%23374151'/%3E%3C/marker%3E%3C/defs%3E%3C/svg%3E" alt="Diagramme d'Activité" style="width: 100%; max-width: 400px; height: auto;">
+                        <div style="margin-top: 15px; padding: 10px; background: #f1f5f9; border-radius: 8px;">
+                            <strong>Processus principal :</strong>
+                            <ul style="text-align: left; margin: 10px 0; list-style: none;">
+                                <li>🔄 <strong>Initialisation</strong> - Capteurs, carte SD, écran</li>
+                                <li>📊 <strong>Acquisition</strong> - Lecture et affichage des mesures</li>
+                                <li>💾 <strong>Sauvegarde</strong> - Formatage CSV et écriture SD</li>
+                                <li>⚠️ <strong>Alertes</strong> - Détection seuils critiques</li>
+                                <li>📡 <strong>Transmission</strong> - Envoi données distantes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p>Décrit les processus opérationnels de la station météo, des conditions initiales aux résultats finaux, incluant les branchements conditionnels.</p>
+                </div>
+            </div>
+
+            <div class="interactive-section">
+                <h3 style="text-align: center; color: var(--primary-blue); margin-bottom: 30px;">Concepts Clés de Modélisation</h3>
+                <div class="cards-grid">
+                    <div class="card">
+                        <span class="card-icon">🎯</span>
+                        <h3>Bon Modèle</h3>
+                        <p>Un bon modèle permet de répondre de façon satisfaisante à des questions prédéfinies sur le système, au bon niveau de détail et selon le bon point de vue.</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-icon">🔗</span>
+                        <h3>Relations SysML</h3>
+                        <p><strong>Include</strong> : incorporation obligatoire<br>
+                        <strong>Extend</strong> : ajout optionnel<br>
+                        <strong>Généralisation</strong> : héritage de comportements</p>
+                    </div>
+                    <div class="card">
+                        <span class="card-icon">⏱️</span>
+                        <h3>Séquences</h3>
+                        <p>Lignes de vie verticales, messages horizontaux, barres d'activation et fragments pour modéliser boucles, alternatives et parallélisme.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipe" class="section" style="background: var(--gray-100);">
+        <div class="container">
+            <h2 class="section-title">Équipe Projet</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <span class="card-icon">👨‍💻</span>
+                    <h3>Alan Manwaring</h3>
+                    <p>Analyse système et modélisation UML/SysML</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">👨‍🔬</span>
+                    <h3>Oussama Abid</h3>
+                    <p>Spécifications techniques et architecture</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">👩‍💼</span>
+                    <h3>Mayssane Zarhoune</h3>
+                    <p>Gestion de projet et documentation</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">👩‍💻</span>
+                    <h3>Emma Pellet</h3>
+                    <p>Interface utilisateur et validation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AIVM</h3>
+                    <p>Agence Internationale pour la Vigilance Météorologique</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Projet</h3>
+                    <p>Station Météorologique Embarquée<br>Livrable 1 - Analyse Fonctionnelle</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Groupe 2 - Système Embarqué<br>Année Universitaire 2024-2025</p>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 20px; opacity: 0.8;">
+                © 2024 AIVM - Station Météorologique Embarquée. Projet académique.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Tab functionality
+        function showTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(30, 58, 138, 0.98)';
+            } else {
+                nav.style.background = 'rgba(30, 58, 138, 0.95)';
+            }
+        });
+
+        // Animate cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply animation to cards
+        document.querySelectorAll('.card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+
+        // Interactive diagram placeholders
+        document.querySelectorAll('.diagram-placeholder').forEach(placeholder => {
+            placeholder.addEventListener('click', function() {
+                const loadingDiv = document.createElement('div');
+                loadingDiv.innerHTML = '<div class="loading"></div><br>Chargement du diagramme...';
+                loadingDiv.style.color = 'var(--secondary-blue)';
+                
+                this.innerHTML = loadingDiv.innerHTML;
+                
+                setTimeout(() => {
+                    this.innerHTML = this.getAttribute('data-original') || 'Diagramme interactif disponible prochainement<br><em>Cliquez pour prévisualiser</em>';
+                }, 2000);
+            });
+            
+            // Store original content
+            placeholder.setAttribute('data-original', placeholder.innerHTML);
+        });
+
+        // Add some interactivity to feature lists
+        document.querySelectorAll('.feature-list li').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = 'rgba(59, 130, 246, 0.05)';
+                this.style.borderRadius = '8px';
+                this.style.padding = '15px 20px 15px 30px';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = 'transparent';
+                this.style.borderRadius = '0';
+                this.style.padding = '15px 0';
+            });
+        });
+
+        // Dynamic year update
+        const currentYear = new Date().getFullYear();
+        document.querySelector('footer').innerHTML = document.querySelector('footer').innerHTML.replace('2024', currentYear);
+
+        console.log('🌊 Station Météorologique Embarquée - Site chargé avec succès!');
+    </script>
+</body>
+</html>
